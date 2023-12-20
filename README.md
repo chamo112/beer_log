@@ -1,6 +1,6 @@
 # beer_log
-
-A new Flutter project.
+## 概要
+ビールを記録するアプリです。
 
 ## Getting Started
 
