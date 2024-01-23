@@ -58,31 +58,36 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Container(
               width: double.infinity,
-              height: 100,
-              color: Colors.white,
+              height: 106,
+              color: Colors.grey[700],
               child: Row(
                 children: [
                   Container(
-                    width: 150,
-                    height: 100,
-                    color: Colors.yellow,
-                    child: SvgPicture.asset(
-                          'assets/images/beer_icon.svg',
-                          width: 150,
-                        )
-
+                    width: 80,
+                    height: 80,
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: AspectRatio(
+                        // 正方形の比率を設定
+                          aspectRatio: 1.0,
+                          child: SvgPicture.asset(
+                              'assets/images/beer_sample.svg',
+                              fit: BoxFit.cover
+                          )
+                      ),
+                    ),
                   ),
                   Container(
-                    width: 250,
-                    height: 100,
-                    color: Colors.green,
+                    margin: const EdgeInsets.symmetric(vertical: 10),
                     child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                       Text(
                           "Beer Name",
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
+                          color: Colors.white,
+                          fontSize: 16,
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w700,
                         ),
@@ -90,8 +95,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(
                           "Brewery",
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
+                          color: Colors.white,
+                          fontSize: 12,
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w400,
                         ),
@@ -99,8 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(
                           "Style",
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
+                          color: Colors.white,
+                          fontSize: 12,
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w400,
                         ),
@@ -110,16 +115,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 100,
-              color: Colors.green,
-            ),
-            Container(
-              width: double.infinity,
-              height: 100,
-              color: Colors.blue,
             ),
           ],
         ),
